@@ -366,7 +366,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         final Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).icon(BitmapDescriptorFactory
                 .fromResource(R.drawable.storeicon)));
-        marker.setTitle("hello");
+        //marker.setTitle("hello");
         marker.showInfoWindow();
        /* latLng = new LatLng(12.919914, 77.9743);
         final Marker marker1= mMap.addMarker(new MarkerOptions().position(latLng).icon(BitmapDescriptorFactory
@@ -437,7 +437,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     });
 
 
-                                   // printer();
+                                    printer();
 
                                 } catch (Throwable t) {
                                     // just end the background thread
