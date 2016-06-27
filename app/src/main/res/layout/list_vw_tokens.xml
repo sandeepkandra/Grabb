@@ -1,0 +1,132 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:id="@+id/relativePercentRelativeParent"
+    android:layout_height="match_parent">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/imageViewProgress"
+    android:src="@drawable/waitimg"
+    android:layout_margin="10dp"
+    android:layout_below="@+id/relativePercentRelative1"
+    />
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/relativePercentRelative1"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/txtVwOrderId"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:text="OrderId"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:id="@+id/txtVwTokenId"
+            android:layout_toRightOf="@+id/txtVwOrderId"
+
+
+            android:text="TokenId"
+            android:textStyle="bold"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@+id/relativePercentRelative2"
+        android:layout_below="@+id/relativePercentRelative1"
+        android:padding="15dp" >
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circle"
+            android:id="@+id/txtVwtime1"
+            android:text="5 Min"
+            />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circle"
+            android:layout_toRightOf="@+id/txtVwtime1"
+            android:gravity="center"
+            android:id="@+id/txtVwtime2"
+            android:text="10 Min"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/txtVwtime2"
+            android:id="@+id/txtVwtime3"
+            android:text="15 Min"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle"
+            android:layout_toRightOf="@+id/txtVwtime3"
+            android:gravity="center"
+            android:id="@+id/txtVwtime4"
+            android:text="20 Min"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:background="@drawable/background_white"
+            android:layout_toRightOf="@+id/txtVwtime4"
+            android:gravity="center"
+            android:id="@+id/btnAccept"
+            android:text="Accept"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtVwtime4"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#ff0000"
+            android:id="@+id/txtVwCheckTime"
+            android:text="Please Select Any One"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:padding="5dp"
+
+        android:layout_below="@+id/relativePercentRelative2"
+        android:scrollbars="vertical"
+        android:id="@+id/txVwOrderDetails"
+        android:background="@drawable/editbackroundlite"
+        android:textColor="#000000"
+        style="@style/textsizetab1"
+        android:text="Cappuchino  carmal"/>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center_vertical"
+    android:textSize="20sp"
+    android:id="@+id/btnPopUP"
+    android:layout_below="@+id/txVwOrderDetails"
+    android:text="Click Here"/>
+</android.support.percent.PercentRelativeLayout>

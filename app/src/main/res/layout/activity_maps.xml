@@ -1,0 +1,125 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#00FFFFFF"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00FFFFFF">
+
+        <ImageView
+            android:id="@+id/imgVwHome"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/logoround" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/txtVwgrabb"
+            android:text="Grabb-n-Go"
+            android:textSize="30sp" />
+        <ImageView
+            android:id="@+id/imgVwSetting"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_settings_black_24dp" />
+
+        <TextView
+            android:id="@+id/txtVwMerchantOpen"
+            style="@style/textsizetab"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtVwMerchantClose"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/txtVwMerchantClose"
+            android:background="@drawable/backgroundgreen"
+            android:paddingBottom="5dp"
+            android:paddingLeft="33dp"
+            android:paddingTop="5dp"
+            android:text="Inventory"
+            android:textColor="#000000"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtVwMerchantClose"
+            style="@style/textsizetab"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_white"
+            android:paddingBottom="5dp"
+            android:paddingLeft="33dp"
+            android:paddingTop="5dp"
+            android:text="Close"
+            android:textColor="#000000"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_tokenIDs"
+        android:background="#00ffffff"
+        android:visibility="gone"
+        android:layout_below="@+id/mapbar"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="7%"
+         />
+    <android.support.percent.PercentRelativeLayout
+
+        android:id="@+id/relativePercentRelative"
+
+        android:layout_below="@+id/recycle_tokenIDs"
+        app:layout_heightPercent="67%"
+        app:layout_widthPercent="100%">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            app:layout_widthPercent="100%"
+            android:layout_height="match_parent"
+            map:cameraBearing="112.5"
+
+            map:cameraTilt="30"
+            map:cameraZoom="13"
+            map:mapType="normal"
+            map:uiCompass="true"
+            map:uiRotateGestures="true"
+            map:uiScrollGestures="true"
+            map:uiTiltGestures="true"
+            map:uiZoomControls="true"
+            map:uiZoomGestures="true"
+
+            />
+
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+
+        android:layout_below="@+id/relativePercentRelative"
+        app:layout_heightPercent="30%"
+        android:id="@+id/relativeRecycleView"
+        android:background="#00FFFFFF"
+        app:layout_widthPercent="100%">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_token"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" />
+
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentRelativeLayout>

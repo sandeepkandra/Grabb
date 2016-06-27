@@ -1,0 +1,213 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#00FFFFFF"
+
+    android:id="@+id/relativePercentRelativeParent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/relativePercentRelative1"
+        android:layout_height="wrap_content">
+    <TextView
+        app:layout_widthPercent="33%"
+        app:layout_heightPercent="8%"
+        android:id="@+id/txtVwOrderId"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:text="OrderId"
+        android:textStyle="bold"/>
+    <TextView
+        app:layout_widthPercent="33%"
+        app:layout_heightPercent="8%"
+        android:padding="5dp"
+        android:id="@+id/txtVwTokenId"
+        android:layout_toRightOf="@+id/txtVwOrderId"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:text="TokenId"
+        android:textStyle="bold"/>
+        <Button
+            app:layout_widthPercent="33%"
+            app:layout_heightPercent="8%"
+            android:padding="5dp"
+            android:id="@+id/btnPrint"
+            android:layout_toRightOf="@+id/txtVwTokenId"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+
+            android:text="Re-Print"
+            android:textStyle="bold"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:id="@+id/relativePercentRelative2"
+        android:layout_below="@+id/relativePercentRelative1"
+        android:padding="15dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:background="@drawable/background_white"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:id="@+id/txtVwReject"
+            android:text="Reject"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/txtVwReject"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circle"
+            android:id="@+id/txtVwtime1"
+            android:text="5 Min"
+            />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circle"
+            android:layout_toRightOf="@+id/txtVwtime1"
+            android:gravity="center"
+            android:id="@+id/txtVwtime2"
+            android:text="10 Min"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/txtVwtime2"
+            android:id="@+id/txtVwtime3"
+            android:text="15 Min"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle"
+            android:layout_toRightOf="@+id/txtVwtime3"
+            android:gravity="center"
+            android:id="@+id/txtVwtime4"
+            android:text="20 Min"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_white"
+            android:layout_toRightOf="@+id/txtVwtime4"
+            android:gravity="center"
+            android:id="@+id/btnAccept"
+            android:text="Accept"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtVwtime4"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="#ff0000"
+        android:id="@+id/txtVwCheckTime"
+        android:text="Please Select Any One"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+android:layout_below="@+id/relativePercentRelative2"
+        android:scrollbars="vertical"
+        android:id="@+id/txVwOrderDetails"
+        android:background="@drawable/editbackroundlite"
+        android:textColor="#000000"
+        style="@style/textsizetab1"
+        android:text="Cappuchino  carmal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnComplete"
+        android:hint="Complete"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/txVwOrderDetails"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative2"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/txVwOrderDetails"
+        >
+
+        <TextView
+
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            style="@style/textsizetab"
+            android:text="Order"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+
+            android:paddingBottom="5dp"
+            android:background="@drawable/background_white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/txtVwCheckStatusOrder" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Cooking"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            style="@style/textsizetab"
+
+            android:background="@drawable/background_white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtVwCheckStatusOrder"
+            android:layout_toEndOf="@+id/txtVwCheckStatusOrder"
+            android:id="@+id/txtVwCheckStatusCooking" />
+        <TextView
+
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Completed"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+            style="@style/textsizetabComplete"
+            android:background="@drawable/background_white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/txtVwCheckStatusCooking"
+            android:layout_toEndOf="@+id/txtVwCheckStatusCooking"
+            android:id="@+id/txtVwCheckStatusCompleted" />
+
+
+
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

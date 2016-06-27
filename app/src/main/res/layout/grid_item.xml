@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
+android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:tag="Bottom2"
+        android:background="@drawable/background_white"
+        android:layout_width="180dp"
+        android:gravity="center"
+        android:id="@+id/lnrtrash"
+        android:layout_height="30dp">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:text="Order ID"
+                android:id="@+id/imgVwSwipeStock"
+                android:background="@drawable/app_icon"
+
+
+                /></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        
+        android:background="@drawable/background_white"
+        >
+        <!-- <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:src="@drawable/pickedup"
+             android:id="@+id/txtVwOrderId"
+             android:visibility="gone"/>-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+
+
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+            android:visibility="gone"
+                android:id="@+id/imgVwStock"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+
+                android:layout_toRightOf="@+id/imgVwStock">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:id="@+id/txtVwProductName"
+                        android:layout_height="wrap_content"
+                        />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtVwProductName"
+                    android:id="@+id/imgVwStockAvailable"
+                    android:layout_height="30dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</com.daimajia.swipe.SwipeLayout>
